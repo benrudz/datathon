@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>911</width>
+    <height>719</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AMM Module Editor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Data Dictionary Path:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="dataDictPathEdit">
+         <property name="text">
+          <string>Not Set - Open Module Configuration to Automatically Set</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dataDictChangeButton">
+         <property name="styleSheet">
+          <string notr="true">background:rgb(100, 200, 200)</string>
+         </property>
+         <property name="text">
+          <string>Change</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="reloadDict">
+         <property name="styleSheet">
+          <string notr="true">background: rgb(250, 250, 100)</string>
+         </property>
+         <property name="text">
+          <string>Reload</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="moduleDescrFrame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="descrLabel">
+         <property name="text">
+          <string>Module Description:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="descrEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabBarAutoHide" stdset="0">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="ioTab">
+       <attribute name="title">
+        <string>Module I/O</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="1">
+         <widget class="QPushButton" name="addInterfaceButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:rgb(100, 255, 100)</string>
+          </property>
+          <property name="text">
+           <string>Add Interface</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="delInterfaceButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:rgb(255, 100, 100)</string>
+          </property>
+          <property name="text">
+           <string>Del Interface</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>37</width>
+            <height>17</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QTableWidget" name="interfaceTable"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Flow Diagram</string>
+       </attribute>
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>861</width>
+          <height>451</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="paramTab">
+       <attribute name="title">
+        <string>Module Parameters</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="1">
+         <widget class="QPushButton" name="addParamButton">
+          <property name="styleSheet">
+           <string notr="true">background:rgb(100, 255, 100)</string>
+          </property>
+          <property name="text">
+           <string>Add Parameter</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="delParamButton">
+          <property name="styleSheet">
+           <string notr="true">background:rgb(255, 100, 100)</string>
+          </property>
+          <property name="text">
+           <string>Del Parameter</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QTableWidget" name="paramTable"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="srcTab">
+       <attribute name="title">
+        <string>Module Sources</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="1" rowspan="2">
+         <widget class="QGroupBox" name="cSrcGroupBox">
+          <property name="title">
+           <string>C Sources</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="1" column="0">
+            <widget class="QPushButton" name="addCSrcButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(100, 255, 100)</string>
+             </property>
+             <property name="text">
+              <string>Add Source</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="delCSrcButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(255, 100, 100)</string>
+             </property>
+             <property name="text">
+              <string>Del Source</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QListWidget" name="cSrcList"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QGroupBox" name="headerGroupBox">
+          <property name="title">
+           <string>Header Paths</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0" colspan="2">
+            <widget class="QListWidget" name="headerPathList"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="delHeaderButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(255, 100, 100)</string>
+             </property>
+             <property name="text">
+              <string>Del Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="addHeaderButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(100, 255, 100)</string>
+             </property>
+             <property name="text">
+              <string>Add Path</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="2" rowspan="2">
+         <widget class="QGroupBox" name="cxxSrcGroupBox">
+          <property name="title">
+           <string>C++ Sources</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="1" column="0">
+            <widget class="QPushButton" name="addCxxSrcButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(100, 255, 100)</string>
+             </property>
+             <property name="text">
+              <string>Add Source</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="delCxxSrcButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(255, 100, 100)</string>
+             </property>
+             <property name="text">
+              <string>Del Source</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QListWidget" name="cxxSrcList"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QGroupBox" name="libPathGroup">
+          <property name="title">
+           <string>Library Paths</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="1" column="0">
+            <widget class="QPushButton" name="addLibPathButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(100, 255, 100)</string>
+             </property>
+             <property name="text">
+              <string>Add Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="delLibPathButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(255, 100, 100)</string>
+             </property>
+             <property name="text">
+              <string>Del Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QListWidget" name="libPathList"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QGroupBox" name="libGroup">
+          <property name="title">
+           <string>Extra Libraries</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="1" column="0">
+            <widget class="QPushButton" name="addLibButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(100, 255, 100)</string>
+             </property>
+             <property name="text">
+              <string>Add Library</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="delLibButton">
+             <property name="styleSheet">
+              <string notr="true">background:rgb(255, 100, 100)</string>
+             </property>
+             <property name="text">
+              <string>Del Library</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QListWidget" name="libList"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>911</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
